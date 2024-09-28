@@ -1,5 +1,5 @@
 
-import "@babel/polyfill";
+import 'regenerator-runtime/runtime';
 
 import React,{useState,useEffect } from "react";
 import './../styles/App.css';
@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
   const fetchApi = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=2d19741fec5e1ebbce4e4b02007b3734`;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=2d19741fec5e1ebbce4e4b02007b3734";
     fetch(url)
       .then(response => {
         if (!response.ok) {
